@@ -111,14 +111,44 @@ selected in the previous step. Click Next.
 k. In the Create the data collector set? screen, click Finish.
 
 l. Expand User Defined and select Memory Logs. Right-click Data Collector01and select Properties.
+
 ![image](https://user-images.githubusercontent.com/65653010/236679226-e671b7f0-7955-4cf8-8517-f13e7ac96d98.png)
 
 m. In the DataCollector01 Properties window, chhange the Log format: field to Comma Separated.
+
 ![image](https://user-images.githubusercontent.com/65653010/236679308-f2504c42-678c-4c38-8d1d-34fa839d8c17.png)
 
 n. Click the File tab.
 
 Question:What is the full path name to the example file?
+
 ![image](https://user-images.githubusercontent.com/65653010/236679371-39dd4d94-aea8-4d8c-8238-67a58b741c7b.png)
 
+o. Click OK
 
+p. Select the Memory Logs icon in the left pane of the Performance Monitor window. Click the green
+arrow icon to start the data collection set. Notice a green arrow is placed on top of the Memory Logs
+icon.
+
+q. To force the computer to use some of the available memory, open and close a browser.
+
+r. Click the black square icon to stop the data collection set.
+
+s. Click Start > Computer,and click drive C: > PerfLogs. Locate the folder that starts with your PC’s name
+followed by a timestamp, DESKTOP-NDFE14H_20170514-000001 in the example. Double-click the
+folder to open it, and then double-click the DataCollector01.csv file. If prompted, click Continue to
+permit access to the folder.
+
+t. Close the DataCollector01.csv file and the window with the PerfLogs folder.
+
+u. Select the Performance Monitor window. Right-click Memory Logs > Delete.
+
+![image](https://user-images.githubusercontent.com/65653010/236679686-bc696496-223c-4b49-bb2a-04f3a7caa537.png)
+v. The Performance Monitor > Confirm Delete window opens. Click Yes.
+
+w. Open drive C: > PerfLogs folder. Right-click on the folder that was created to hold the Memory log file,
+then click Delete.
+
+x. The Delete Folder window opens. Click Yes.
+
+y. Close all open windows.
