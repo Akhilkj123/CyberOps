@@ -51,3 +51,5 @@ What did you observe in the TCPView window?
 
 c. Reopen the web browser. Research some of the processes listed in TCPView. Record your findings.
 
+![image](https://user-images.githubusercontent.com/65653010/236663734-dd376fdc-4e82-41fe-bfd2-48e024b6c334.png)
+
