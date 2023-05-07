@@ -85,5 +85,10 @@ Question:
 What is another way to delete a user account?
 ![image](https://user-images.githubusercontent.com/65653010/236668982-929e6822-b563-4038-8a47-30d578a689c7.png)
 
+#### Reflection Questions
+1. Why is it important to protect all accounts with strong passwords?
+- Protecting user accounts with strong passwords is essential because weak passwords can leave accounts vulnerable to hacking, identity theft, and other cyber attacks. When an account is hacked, the attacker may gain access to sensitive information, such as personal information, financial information, or sensitive business data. This information can be used for a variety of malicious purposes, including identity theft, financial fraud, or corporate espionage. In addition, a hacked account may be used to launch attacks on other users, further propagating the cyber threat.
 
+2. Why would you create a user with Standard privileges?
+- Creating a user account with standard privileges is a common practice in computer security to ensure that the user has limited access to the system and its resources.
 
