@@ -28,7 +28,17 @@ e. Close SciTE by clicking the X icon on the upper right side of the window and 
 
 f. Click File > Open... and search for the newly saved file, space.txt.
 
+g. Even though SciTE is looking at the correct directory (/home/analyst), space.txt is not displayed. This is
+because SciTE is looking for known extensions and .txt is not one of them. To display all files, click the
+dropdown menu at the bottom of the Open File window and select All Files (*).
+
+h. Select space.txt to open it.
+Note: While the Linux file systems do not rely on extensions, some applications such as SciTE may
+attempt to use them to identify file types.
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/88d99077-ac05-47e9-84f8-ddceaec61a32)
+
+i. Close space.txt when finished.
 
 Question:
 Could you immediately find space.txt?
