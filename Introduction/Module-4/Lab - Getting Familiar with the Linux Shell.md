@@ -14,11 +14,14 @@ a. To learn more about the man page, type:
 [analyst@secOps ~]$ man man
 Question:
 Name a few sections that are included in a man page.
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/5900cf2b-0715-4137-b465-7280b7b2eb05)
+
 b. Type q to exit the man page.
 
 c. Use the man command to learn more about the cp command:
 [analyst@secOps ~]$ man cp
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/f05503b4-c14a-4f95-a7a8-4890753d6ac4)
 
 What is the function of the cp command?
@@ -47,6 +50,7 @@ What is the current directory?
 b. Navigate to the /home/analyst directory if it is not your current directory. Type cd /home/analyst
 
 [analyst@secOps ~]$ cd /home/analyst
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/23f428be-6fb9-4696-9f40-d2eb3b6fc2b2)
 
 c. Type ls -l at the command prompt to list the files and folders that are in the current folder. Standing for
@@ -60,6 +64,7 @@ cyops_folder2, and cyops_folder3. Type mkdir cyops_folder1 and press Enter. Repe
 create cyops_folder2 and cyops_folder3.
 
 e. Type ls -l to verify that the folders have been created:
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/34565c0c-4854-4589-b230-22a174859e1e)
 
 f. Type cd /home/analyst/cyops_folder3 at the command prompt and press Enter.
@@ -67,6 +72,7 @@ f. Type cd /home/analyst/cyops_folder3 at the command prompt and press Enter.
 [analyst@secOps cyops_folder3]$
 Question:
 Which folder are you in now?
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/3b1480bc-0feb-494d-afe5-adb99a7ff8f3)
 
 Challenge: Type the command cd ~ and describe what happens.
@@ -75,6 +81,7 @@ Question:
 Why did this happen?
 
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/87fd7508-1347-4259-bff0-98d0127c25ae)
+
 - '~' represents our home directory.
 
 g. Use the mkdir command to create a new folder named cyops_folder4 inside the cyops_folder3 folder:
@@ -82,6 +89,7 @@ g. Use the mkdir command to create a new folder named cyops_folder4 inside the c
 [analyst@secOps ~]$
 
 h. Use the ls -l command to verify the folder creation.
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/16c75145-bd46-4d1f-93ff-1b3db29fd11c)
 
 i. Up to this point, we have been using full or absolute paths. Absolute path is the term used when referring
@@ -161,7 +169,9 @@ This is a DIFFERENT message, once again echoed to the terminal by echo.
 
 Question:
 What happened to the text file? Explain.
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/eabf43d8-ff6b-4e40-8a83-9359a56608e3)
+
 - It got replaced.
 
 #### Step 5: Redirect and Append to a Text File.
@@ -194,6 +204,7 @@ b. Use ls -l to display the files stored in the analyst home directory.
 [analyst@secOps ~]$ ls –l
 Question:
 How many files are displayed?
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/4eed84d4-a38c-4905-aade-7d8efc0cdf16)
 
 c. Use the ls -la command to display all files in the home directory of analyst, including the hidden files.
@@ -206,6 +217,7 @@ in the output of ls -la above?
 - Yes, it is possible to hide entire directories by adding a dot before its name. Directories with a dot before their name are considered "hidden" directories in Linux, and they are not displayed by default in directory listings.
 
 Give three examples of hidden files shown in the output of ls -la above.
+
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/54c32c81-6933-4e2a-b9a2-80942becb046)
 
 d. Type the man ls command at the prompt to learn more about the ls command.
@@ -265,3 +277,10 @@ some_text_file.txt from /home/analyst/cyops_folder2 back to the home directory:
 [analyst@secOps ~]$ mv cyops_folder2/some_text_file.txt .
 
 [analyst@secOps ~]$ ls –l cyops_folder2/
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/b4c4b34d-a37a-4534-8a80-fba312f97b0b)
+
+Reflection
+
+What are the advantages of using the Linux command line?
+- It it allows users to type in commands that can produce immediate results. Those familiar with command-lines find this method quick and simple. Tasks can also be automated using a batch file, for example. A CLI can also enhance security.
