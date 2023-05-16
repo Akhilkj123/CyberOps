@@ -24,4 +24,7 @@
 - NFS (Network File System) - is a network-based file system, allowing file access over the network. It is an open standard which allows anyone to implement it.
 - CDFS (Compact Disc File System) - was created specifically for optical disk media.
 - Swap File System -  swap file system is used by Linux when it runs out of RAM. It is a swap partition that does not have a specific file system, but it is relevant to the file system discussion. 
-- 
+
+## X Windows System
+- Windowing System designed to provide the basic framework of GUI.
+- X is a server which helps a remote user to connect to a system, start a graphical application, and have the graphical window open on remote terminal.
