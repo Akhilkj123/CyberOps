@@ -15,3 +15,6 @@
 - /var/log/kern.log - Contains information logged by kernal
 - /var/log/cron - Is a service to schedule automated tasks in Linux and this directory stores the information of it.
 - /var/log/mysqld.log - This is a MySQL file. All the information related to mysql. 
+
+
+## The File System Types in Linux
