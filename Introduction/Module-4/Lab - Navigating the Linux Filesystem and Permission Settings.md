@@ -141,4 +141,64 @@ make root the owner of the myFile.txt:
   
 [analyst@secOps second_drive]$ sudo chown analyst myFile.txt 
 
+ ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/5225cbc4-e6dc-4453-85f4-2b4e333eaa38)
+
+  h. Now that analyst is the file owner, try appending the word ‘test’ to the end of myFile.txt.
+
+  [analyst@secOps second_drive]$ echo test >> myFile.txt
+
+[analyst@secOps second_drive]$ cat myFile.txt
+
+  Question:
+Was the operation successful? Explain
+  
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/99b8d98c-44cc-4c0e-8b0a-6bc9240c0ee5)
+
+  #### Step 2: Directory and Permissions
+  
+  a. Change back to the /home/analyst/lab.support.files directory and issue the ls -l command to list all the
+files with details:
+
+  [analyst@secOps second_drive]$ cd ~/lab.support.files/
+
+  [analyst@secOps lab.support.files]$ ls -l
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/6c67501d-ccbd-432a-b86e-3bb54df0ff4b)
+
+  Question:Compare the permissions of the malware directory with the mininet_services file. What is the difference
+between beginning part of the malware line and the mininet_services line?
+- Malware is a directory and mininet_services is a file.
+  
+  ### Part 3: Symbolic Links and other Special File Types
+  #### Step 1: Examine file types.
+  a. Use the ls -l command to display the files in the /home/analyst folder. Notice the first characters of each
+line are either a “–“ indicating a file or a “d” indicating a directory.
+
+  [analyst@secOps ~]$ ls -l
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/f261aecf-06ca-42e7-9788-6eb7ffe48e2b)
+
+ b. Produce a listing of the /dev directory. Scroll to the middle of the output and notice how the block files
+begin with a “b”, the character device files begin with a “c” and the symbolic link files begin with an “l”:
+
+  [analyst@secOps ~]$ ls -l /dev/
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/59816fc8-7c86-4b83-a0bf-8cbfdf9ac11c)
+  
+ c. Symbolic links in Linux are like shortcuts in Windows. There are two types of links in Linux: symbolic links
+and hard links. The difference between symbolic links and a hard links is that a symbolic link file points to
+the filename of another file and a hard link file points to the contents of another file. Create two files by
+using echo:
+[analyst@secOps ~]$ echo "symbolic" > file1.txt
+[analyst@secOps ~]$ cat file1.txt
+[analyst@secOps ~]$ echo "hard" > file2.txt
+[analyst@secOps ~]$ cat file2.txt
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/f4d0072d-7643-40da-880e-2162e062dd89)
+
+  
+  
+
+
+
   
