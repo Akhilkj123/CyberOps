@@ -64,4 +64,81 @@ of the directory again.
   Why is the directory no longer empty? Where are the listed files physically stored?
   - The directory is no longer empty because the files from /ddev/sdb1 are being mounted to ~/second_drive/
   
+  e. Issue the mount command with no options again to display detailed information about the /dev/sdb1
+partition. As before, use the grep command to display only the /dev/sdX filesystems:
+
+  [analyst@secOps ~]$ mount | grep /dev/sd
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/f832992a-425f-4e14-be6f-7468f45e706a)
+
+  f. Unmounting filesystems is just as simple. Make sure you change the directory to something outside of the
+mounting point and use the umount command, as shown below:
+
+  [analyst@secOps ~]$ sudo umount /dev/sdb1
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/db86dd45-d9d0-485c-a445-0e835ab5dc94)
+ ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/dbc81f3d-de91-4bc5-b05f-fef6f5328f75)
+
+ ### Part 2: File Permission
+#### Step 1: Visualize and Change the File Permissions.
+  a. Navigate to /home/analyst/lab.support.files/scripts/.
+  
+[analyst@secOps ~]$ cd lab.support.files/scripts/
+
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/cbf982fc-5336-43db-80be-dd347b4468ec)
+
+  Consider the cyops.mn file as an example. Who is the owner of the file? How about the group?
+  - User 'analyst' . Group 'analyst'
+  
+  The permissions for cyops.mn are –rw-r--r--. What does that mean?
+  - It means that user has only read and write permission, while group and others have only read permission.
+  
+  c. The touch command is very simple and useful. It allows for the quick creation of an empty text file. Use
+the command below to create an empty file in the /mnt directory:
+
+  [analyst@secOps scripts]$ touch /mnt/myNewFile.txt
+  
+  [analyst@secOps ~]$ ls -ld /mnt
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/1674d60a-65e3-4890-a3df-5c31a103777e)
+  
+  What can be done for the touch command shown above to be successful?
+- Can add 'sudo' to the command to impersonate as user.
+  
+  d. The chmod command is used to change the permissions of a file or directory. As before, mount the
+/dev/sdb1 partition on the /home/analyst/second_drive directory created earlier in this lab:
+
+  [analyst@secOps ~]$ sudo mount /dev/sdb1 ~/second_drive/
+  
+e. Change to the second_drive directory and list the contents of it:
+  
+[analyst@secOps ~]$ cd ~/second_drive
+  
+[analyst@secOps second_drive]$ ls -l
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/5f33d678-65f6-4377-a8d9-12cc61c720d2)
+
+  What are the permissions of the myFile.txt file?
+ - It means that user has only read and write permission, while group and others have only read permission.
+  
+f. Use the chmod command to change the permissions of myFile.txt.
+
+[analyst@secOps second_drive]$ sudo chmod 665 myFile.txt
+
+[analyst@secOps second_drive]$ ls -l
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/5ffdc26f-cc31-494e-b12f-659083dbb578)
+ 
+  Did the permissions change? What are the permissions of myFile.txt?
+  - Yes now users and group has got write permission while others has got executable permission.
+  
+  What command would change the permissions of myFile.txt to rwxrwxrwx, granting any user in the
+system full access to the file?
+ - chmod 777 myFile.txt
+
+  g. The chown command is used to change ownership of a file or directory. Issue the command below to
+make root the owner of the myFile.txt:
+  
+[analyst@secOps second_drive]$ sudo chown analyst myFile.txt 
+
   
