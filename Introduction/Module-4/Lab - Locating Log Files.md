@@ -151,8 +151,50 @@ two last boots, add the -2 option.
 
 [analyst@secOps ~]$ sudo journalctl –b -2
 
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/721183d0-5c49-4e98-9f81-eac3aa9aa0bb)
 
+d. Use the --list-boots option to list previous boots:
 
+[analyst@secOps ~]$ sudo journalctl –-list-boots
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/141d45d7-afd6-41c2-83ac-a271c154c51d)
+
+e. Use the --since “<time range>” to specify the time range of which log entries should be displayed. The
+two commands below display all log entries generated in the last two hours and in the last day,
+respectively:
+
+ [analyst@secOps ~]$ sudo journalctl –-since "2 hours ago"
+ 
+ ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/b057eb44-8622-4884-b1ac-0ab2a0b2fdde)
+ 
+ [analyst@secOps ~]$ sudo journalctl –-since "1 day ago"
+ 
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/aefe1436-3225-44f7-8f33-7d47e61ad3e1)
+ 
+ f. journalctl also allows for displaying log entries related to a specific service with the –u option. The
+command below displays logs entries related to nginx:
+
+ [analyst@secOps ~]$ sudo journalctl –u nginx.service
+
+g. Similar to tail –f, journalctl also supports real-time monitoring. Use the –f option to instruct journalctl to
+follow a specific log. Press Ctrl + C to exit.
+
+ [analyst@secOps ~]$ sudo journalctl -f
+
+ ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/399012ea-0420-4220-94e0-48260b7b67ff)
+ 
+h. journalctl also supports mixing options to achieve the desired filter set. The command below monitors
+nginx system events in real time.
+
+ [analyst@secOps ~]$ sudo journalctl -u nginx.service -f
+ 
+ ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/fa9debf0-3a7d-454c-9cc2-36fd8a7fad7f)
+
+i. Keep the command above running, open a new web browser window and type 127.0.0.1 (default
+configuration) or 127.0.0.1:8080 (custom_server.conf) in the address bar. journalctl should display an
+error related to a missing favicon.ico file in real-time. Use Ctrl+C to quit journalctl.
+ 
+ 
 
 
 
