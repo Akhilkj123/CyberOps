@@ -189,12 +189,42 @@ begin with a “b”, the character device files begin with a “c” and the sy
 and hard links. The difference between symbolic links and a hard links is that a symbolic link file points to
 the filename of another file and a hard link file points to the contents of another file. Create two files by
 using echo:
-[analyst@secOps ~]$ echo "symbolic" > file1.txt
-[analyst@secOps ~]$ cat file1.txt
-[analyst@secOps ~]$ echo "hard" > file2.txt
-[analyst@secOps ~]$ cat file2.txt
+
+  [analyst@secOps ~]$ echo "symbolic" > file1.txt
+
+  [analyst@secOps ~]$ cat file1.txt
+
+  [analyst@secOps ~]$ echo "hard" > file2.txt
+
+  [analyst@secOps ~]$ cat file2.txt
   
   ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/f4d0072d-7643-40da-880e-2162e062dd89)
+  
+  d. Use ln –s to create a symbolic link to file1.txt, and ln to create a hard link to file2.txt:
+
+  [analyst@secOps ~]$ ln –s file1.txt file1symbolic
+
+  [analyst@secOps ~]$ ln file2.txt file2hard
+  
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/b3bc12d4-e461-46f0-9427-df189a653590)
+f. Change the names of the original files: file1.txt and file2.txt, and notice how it effects the linked files.
+
+  [analyst@secOps ~]$ mv file1.txt file1new.txt
+
+  [analyst@secOps ~]$ mv file2.txt file2new.txt
+
+  [analyst@secOps ~]$ cat file1symbolic
+
+[analyst@secOps ~]$ cat file2hard
+hard
+
+  ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/9ce77b7d-57bd-4dde-b931-9eb1e6dbdf4a)
+
+
+What do you think would happen to file2hard if you opened a text editor and changed the text in
+file2new.txt?
+   ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/96adadae-1a54-47c7-9c60-f847a37ac6bd)
+- When the text of file2new.txt is changed, the text of file2hard also changed.
 
   
   
