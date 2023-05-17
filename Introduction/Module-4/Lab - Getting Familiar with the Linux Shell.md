@@ -235,4 +235,17 @@ b. [analyst@secOps ~]$ rm –r cyops_folder1
 
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/5f423edd-96e5-4e8c-ace1-8f0dfe22e1e1)
 
+#### Step 3: Moving Files and Directories
+a. [analyst@secOps ~]$ mv cyops_folder2/some_text_file.txt .
+
+[analyst@secOps ~]$ ls –l cyops_folder2/
+
+
+ What are the advantages of using the Linux command line?
+
+- Using the Linux command line, also known as the shell or terminal, offers several advantages:
+- Efficiency and speed: The command line allows you to perform tasks quickly and efficiently. With the ability to use keyboard shortcuts, command completion, and scripting, you can automate repetitive tasks and accomplish complex operations with a few commands.
+
+- Flexibility and power: The command line provides access to a wide range of powerful utilities and tools, giving you extensive control over your system. You can perform tasks such as file management, process control, network configuration, system administration, and more, all from a single interface.
+
 
