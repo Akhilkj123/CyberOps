@@ -7,17 +7,13 @@
 ### What are Protocols?
 - Network protocols specify many features of network communication such as
 
-
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/a79eb169-58f7-4637-89a5-b25cba2ce194)
 
 ### The TCP/IP Protocol Suite
 
-
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/a11458f1-0707-4fee-a22f-ea24457035ce)
 
 #### Application Layer
-
-#### Name System
 
 - **DNS -** Domain Name System. Translates domain names such as cisco.com, into IP addresses.
 Host Config
@@ -62,3 +58,54 @@ Email
 - **ARP -** Address Resolution Protocol. Provides dynamic address mapping between an IPv4 address and a hardware address.
 - **Ethernet -** Defines the rules for wiring and signaling standards of the network access layer.
 - **WLAN -** Wireless Local Area Network. Defines the rules for wireless signaling across the 2.4 GHz and 5 GHz radio frequencies.
+
+- **Unicast** - A one-to-one delivery option is referred to as a unicast, meaning there is only a single destination for the message.
+- **Multicast** - When a host needs to send messages using a one-to-many delivery option, it is referred to as a multicast.
+- **Broadcast** - If all hosts on the network need to receive the message at the same time, a broadcast may be used. Broadcasting represents a one-to-all message delivery option.
+
+
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/e7850a8a-c6eb-45a9-bdfa-80aa23510906)
+
+### The OSI Reference Model
+
+- **7 - Application -** The application layer contains protocols used for process-to-process communications.
+- **6 - Presentation -** The presentation layer provides for common representation of the data transferred between application layer services.
+- **5 - Session -** The session layer provides services to the presentation layer to organize its dialogue and to manage data exchange.
+- **4 - Transport -** The transport layer defines services to segment, transfer, and reassemble the data for individual communications between the end devices.
+- **3 - Network -** The network layer provides services to exchange the individual pieces of data over the network between identified end devices.
+- **2 - Data Link-** The data link layer protocols describe methods for exchanging data frames between devices over a common media
+- **1 - Physical-** The physical layer protocols describe the mechanical, electrical, functional, and procedural means to activate, maintain, and de-activate physical connections for a bit transmission to and from a network device.
+
+### The TCP/IP Protocol Model
+- **4 - Application -** Represents data to the user, plus encoding and dialog control.
+- **3 - Transport -** Supports communication between various devices across diverse networks.
+- **2 - Internet -** Determines the best path through the network.
+- **1 - Network Access -** Controls the hardware devices and media that make up the network.
+
+## Data Encapsulation
+### Segmenting Messages
+
+This leads to segmenting messages having two primary benefits:
+
+- **Increases speed -** Because a large data stream is segmented into packets, large amounts of data can be sent over the network without tying up a communications link. This allows many different conversations to be interleaved on the network called multiplexing.
+- **Increases efficiency -** If a single segment fails to reach its destination due to a failure in the network or network congestion, only that segment needs to be retransmitted instead of resending the entire data stream.
+
+
+### Sequencing
+- Each segment of the message must go through a similar process to ensure that it gets to the correct destination and can be reassembled into the content of the original message, as shown in the figure. TCP is responsible for sequencing the individual segments.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/d74810ae-2bf1-4115-8282-281fc5ef578e)
+
+### Protocol Data Units
+- As application data is passed down the protocol stack on its way to be transmitted across the network media, various protocol information is added at each level. This is known as the encapsulation process. The form that a piece of data takes at any layer is called a protocol data unit (PDU). During encapsulation, each succeeding layer encapsulates the PDU that it receives from the layer above in accordance with the protocol being used.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/b63e51fb-ff5b-4f1d-a501-622c9d2cee71)
+
+### Three Addresses
+- Network protocols require that addresses be used for network communication. Addressing is used by the client to send requests and other data to a server. The server uses the client’s address to return the requested data to the client that requested it. The OSI transport, network, and data link layers all use addressing in some form. The transport layer uses protocol addresses in the form of port numbers to identify network applications that should handle client and server data.
+
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/d48f9dc6-fd72-42c6-8fb0-0a0134241369)
+
+
