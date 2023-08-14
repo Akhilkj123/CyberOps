@@ -15,4 +15,14 @@
 
 ## Part 2: Capture and Analyze ICMP Data in Wireshark
 ### Step 1: Examine the captured data on the same LAN.
+a. On Node: H1, enter wireshark & to start Wireshark (The pop-up warning is not important for this lab.
+
+b. In the Wireshark window, under the Capture heading, select the H1-eth0 interface. Click Start to capture
+the data traffic.
+
+c. On Node: H1, press the Enter key, if necessary, to get a prompt. Then type ping -c 5 10.0.0.12 to ping
+H2 five times. The command option -c specifies the count or number of pings. The 5 specifies that five
+pings should be sent. The pings will all be successful.
+
+![Uploading image.png…]()
 
