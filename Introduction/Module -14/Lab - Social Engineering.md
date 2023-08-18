@@ -20,3 +20,4 @@
 
 #### e. What is the SANS Institute, which authored this article?
 - The SANS Institute is a well-known and respected organization in the field of cybersecurity and information security. It is a cooperative research and education organization that provides a wide range of cybersecurity training, certification, research, and resources to professionals and organizations around the world.
+- The author of this article is Michael Alexander and certified by GIAC (GCCC) Gold Certification
