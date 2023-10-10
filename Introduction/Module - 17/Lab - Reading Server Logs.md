@@ -19,7 +19,7 @@ What is the drawback of using more?
 
 d. From the same terminal window, use less to display the contents the logstash-tutorial.log file again:
 
-![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/a608c1e4-8373-4722-99e2-3634e9504dc3
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/a608c1e4-8373-4722-99e2-3634e9504dc3)
 
 ![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/e1658a18-e81f-4945-b8bd-2e8130fb3ae9)
 
