@@ -30,5 +30,30 @@ g. To make the file readable, run the OpenSSL command again, but this time add t
 option tells OpenSSL to encode the encrypted message using a different encoding method of Base64
 before storing the results in a file.
 
-![Uploading image.png…]()
+h. Once again, use the cat command to display the contents of the, now re-generated, message.enc file:
+
+Is message.enc displayed correctly now? Explain.
+- No it is displayed in base64 format
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/1b7d6fac-8e76-4cb7-baa9-dea861a1999c)
+
+Can you think of a benefit of having message.enc Base64-encoded?
+- Base64 encoding ensures data compatibility, text representation, and URL safety in various applications, making it useful for data transmission and storage.
+
+## Part 2: Decrypting Messages with OpenSSL
+a. Use the command below to decrypt message.enc:
+
+b. OpenSSL will ask for the password used to encrypt the file. Enter the same password again.
+
+c. When OpenSSL finishes decrypting the message.enc file, it saves the decrypted message in a text file
+called decrypted_letter.txt. Use the cat display the contents of decrypted_letter.txt:
+
+
+Was the letter decrypted correctly?
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/a3aaa40c-81b2-4b5e-bc8c-f867864d0969)
+
+The command used to decrypt also contains -a option. Can you explain?
+- The -a option in the OpenSSL program is used to specify the input format when decrypting data.
+
 
