@@ -33,3 +33,16 @@ What was printed by the command above? Is this expected?
 
 f. Use cat to view the applicationX_in_human.log. Notice that the extra line is now removed and the
 timestamps for the log entries have been converted to human readable format.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/832d328c-087a-4f07-9529-30f2b62e65d8)
+
+## Part 2: Normalize Timestamps in an Apache Log File
+Similar to what was done with the applicationX_in_epoch.log file, Apache web server log files can also be
+normalized. Follow the steps below to convert Unix Epoch to Human Readable timestamps. Consider the
+following Apache log file, apache_in_epoch.log:
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/dd12fbb5-92ff-48bc-9137-4abd943ccb8d)
+
+a. First, answer the questions below. They are crucial for the construction of the script.
+
+
