@@ -15,4 +15,64 @@ What is interesting about the timestamps of all the alerts on 3-19-2019?
 
 ### Step 2: Review the alerts in detail.
 a. In Sguil, click the first of the alerts on 3-19-2019 (Alert ID 5.439). Make sure to check the Show Packet
-Data and Show Rule checkboxes to examine the packet header information and the IDS signature rule 
+Data and Show Rule checkboxes to examine the packet header information and the IDS signature rule related to the alert. Right on the Alert ID and pivot to Wireshark. Based on the information derived from this initial alert answer the following questions:
+
+What was the source IP address and port number and destination IP address and port number?
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/ef9d709f-86c4-4af6-96f1-442d457ed008)
+- Source Port: 52609 and Destination Port: 53
+
+What type of protocol and request or response was involved?
+- UDP, Dynamic DNS
+
+What is the IDS alert and message?
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/672411ce-59eb-4488-9b1b-8b4a92de8adb)
+
+Do you think this alert was the result of an IDS misconfiguration or a legitimate suspicious
+communication?
+- This alert may be the result of a misconfiguration in the IDS because the DNS request was a Dynamic DNS update from an internal host to a DNS server on the internal network
+
+What is the hostname, domain name, and IP address of the source host in the DNS update?
+- Bobby-Tiger-PC, littletigers.info, 10.0.90.215
+
+b. In Sguil, select the second of the alerts on 3-19-2019. Right click the Alert ID 5.440 and select
+Transcript.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/3cbe50eb-6b3e-41d4-94ce-17935ea6bea6)
+
+From the transcript answer the following questions:
+
+What is the source and destination IP address and port numbers?
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/d828c149-dd0a-4c05-8b74-91380007616d)
+
+Looking at the request (blue) what was the request for? 
+- GET /test1.exe
+
+Looking at the reply (red) many files will reveal their file signature in the initial few characters of the file
+when viewed as text. File signatures help identify the type of file that is represented. Use a web browser
+to search for a list of common file signatures.
+
+
+What is the initial few characters of the file file. Search for this file signature to find out what type of file
+was downloaded in the data?
+- The initial characters of this fiel is MZ, a Windows executable .exe or .dll file
+
+c. Close the transcript. Use Wireshark to export the executable file for malware analysis (File > Export
+Objects > HTTP…). Save the file to the analyst's home folder.
+
+d. Open a terminal in Security Onion VM and create a SHA256 hash from the exported file. Use the
+following command:
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/db0e84ab-31a2-4f02-8efc-0d39b83bf715)
+
+e. Copy the file hash and submit it to the Cisco Talos file reputation center at
+https://talosintelligence.com/talos_file_reputation.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/511c4fae-92ef-4180-bc0c-2dd27595d9e3)
+
+Did Talos recognize the file hash and identif y it as malware? If so, what kind of malware?
+
+f. In Sguil select the alert with Alert ID 5.480 and the Event Message Remcos RAT Checkin 23. Notice that the IDS signature has detected the Remcos RAT based on the binary hex codes at the beginning of communication.
+- 
