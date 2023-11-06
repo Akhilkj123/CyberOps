@@ -102,3 +102,91 @@ What type of encryption and obfuscation was used to bypass detection?
 h. Using Sguil and the remaining alerts from 3-19-2019, locate the second executable file that was
 downloaded and check to see if it is known malware.
 
+
+**NOT COMPLETED**
+## Part 2: Use Kibana to Investigate Alerts
+### Step 1: Open Kibana and narrow the timeframe.
+a. Login to Kibana with the analyst username and cyberops password.
+
+b. Open Kibana (username analyst and password cyberops), click Last 24 Hours and the Absolute time
+range tab to change the time range to March 1, 2019 to March 31, 2019.
+
+c. The Total Log Count Over Time timeline will show an event on March 19. Click that event to narrow the
+focus to the specific time range of the attack.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/d450ab11-0dac-4ae4-8b4c-f52b9e107df9)
+
+### Step 2: Review the alerts in the narrowed timeframe.
+a. In the Kibana dashboard scroll down to the All Sensors - Log Type visualization. Review both pages
+and note the variety of log types related to this attack.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/ea05ef3b-11d9-4653-8d5e-22fc1f5f28f5)
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/fe413ed9-e1ac-4905-8523-84300375d538)
+
+b. Scroll down and notice that the NIDS Alert Summary in Kibana has many of the same IDS alerts as listed
+in Sguil. Click the magnifier to filter on the second alert ET TROJAN ABUSE.CH SSL Blacklist Malicious
+SSL certificate detected (Dridex) from Source IP Address 31.22.4.176.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/96098cac-9b57-4a49-9e0e-088771c8ae23)
+
+c. Scroll down to All Logs and click the arrow to expand the first log in the list with source IP address
+31.22.4.176.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/3294c5c7-b86a-4793-8bb0-81b66feed344)
+
+What is the geo country and city location for this alert?
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/87aa2cc4-915e-47f0-a5aa-ffccde38769d)
+
+What is the geo country and city for the alert from 115.112.43.81?
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/96c593fa-ac78-40a9-ae3c-1d75455bdaf9)
+
+d. Scroll back to the top of the page and click the Home link under Navigation.
+
+e. Earlier we noted log types like bro_http listed in the Home dashboard. You can filter for the various log
+type but the built-in dashboards will probably have more information. Scroll back to the top of the page
+and click HTTP in dashboard link under Zeek Hunting in Navigation.
+
+f. Scroll through the HTTP dashboard taking notice of the information presented and answer the following
+questions:
+
+What is the Log Count in the HTTP dashboard? From what countries?
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/84ec3377-4869-41ab-82a1-e61f9879939e)
+
+- United States and Netherlands
+
+What are the URIs for the files that were downloaded?
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/1bd08db9-c7fc-462b-994a-a5d0a50a63c4)
+
+g. Match the HTTP - URIs to the HTTP - Sites on the dashboard.
+
+What are the CSPCA.crl and ncsi.txt files related to? Use a web browser and a search engine for
+additional information.
+
+h. Scroll back to the top of the web page and under Navigation – Zeek Hunting click DNS. Scroll to the DNS Queries visualization. Notice page 1 and page 3 of the DNS queries.
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/211f5cac-3196-42d3-84e6-8f589a054418)
+
+Do any of the domains seem potentially unsafe? Try submitting the URL toptoptop1.online to
+virustotal.com. What is the result?
+- 4 detection engines recognize the URL as malicious regarding malware
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/a1125241-63a2-46ec-9fa5-945f1bd1b876)
+
+i. For further investigation and curiosity, try examining the following Zeek Hunting dashboards:
+
+DCE/RPC - for information about the Windows network remote procedures and resources involved
+
+Kerberos – for information on the hostnames, and domain names that were used
+
+PE – for information on the portable executables
+
+SSL and x.509 – for information on the security certificate names and countries that were used
+
+SMB – for more information on the SMB shares on the littletigers network
+
+Weird – for protocol and service anomalies and malformed communications
