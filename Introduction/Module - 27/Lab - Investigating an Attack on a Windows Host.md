@@ -75,4 +75,30 @@ https://talosintelligence.com/talos_file_reputation.
 Did Talos recognize the file hash and identif y it as malware? If so, what kind of malware?
 
 f. In Sguil select the alert with Alert ID 5.480 and the Event Message Remcos RAT Checkin 23. Notice that the IDS signature has detected the Remcos RAT based on the binary hex codes at the beginning of communication.
-- 
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/e2b8744a-b4b9-489e-a294-2d5e915abb63)
+
+g. Right click the Alert ID and select Transcript. Scroll through the transcript and answer the following
+questions:
+
+What is the destination port of the communication? Is it a well-known port?
+
+![image](https://github.com/Akhilkj123/CyberOps/assets/65653010/ae5fd079-9768-45d6-af54-864df51c3a41)
+
+- It is not a well-known port
+
+Is the communication readable or is it encrypted?
+- It is encrypted
+
+Do some online research on Remcos RAT Checkin 23. What does Remcos stand for?
+- Remote Control and Surveillance software
+
+What type of communication do you think was being transmitted?
+- A keylogger possibly sending keystroke information to a C2C server
+
+What type of encryption and obfuscation was used to bypass detection?
+- RC4 and base64 to obfuscate data.
+
+h. Using Sguil and the remaining alerts from 3-19-2019, locate the second executable file that was
+downloaded and check to see if it is known malware.
+
